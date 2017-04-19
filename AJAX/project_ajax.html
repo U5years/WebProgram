@@ -11,6 +11,7 @@
 </head>
 <body>
 <div class="container">
+	<div class="alert" id="msg"></div>
 	<form id="userForm">
 		<div class="form-group">
 			<label>Github Username:</label>
@@ -24,8 +25,14 @@
 		function getProfile(e) {
 			e.preventDefault();
 			var username = document.getElementById('username').value;
+			var msg = document.getElementById('msg');
+
 			if(!username || username == '') {
-				username = 'Bob';
+				msg.className = "alert alert-danger";
+				msg.innerHTML = 'Please input username';
+			} else {
+				msg.className = "alert alert-success";
+				msg.innerHTML = 'Profile found';
 			}
 
 			var xhttp = new XMLHttpRequest();
