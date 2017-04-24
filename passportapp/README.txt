@@ -1,4 +1,8 @@
-# USAGE
-run "npm install" to install dependencies
+This is a login website project using node.js and mongodb
 
-run "npm start" to start server/app
+Lots of dependencies are used in this project, so for run this project,
+
+  run "npm install" to install dependencies first;
+
+Then
+  run "npm start" to start server/app
